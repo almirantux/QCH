@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QCH</string>
+    <string name="Articulos">Articulos</string>
+    <string name="Videos">Videos</string>
+    <string name="Avisos">Avisos</string>
+    <string name="Recetas">Recetas</string>
+    <string name="ToggleButton">ToggleButton</string>
+    <string name="Registar">Registrar</string>
+    <string name="Actualizar">Actualizar</string>
+</resources>
