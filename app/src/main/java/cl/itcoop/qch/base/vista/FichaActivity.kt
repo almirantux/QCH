@@ -12,8 +12,8 @@ class FichaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ficha)
     }
-    fun  vuelta (view: View) {
-        var anterior= Intent(this, MainActivity::class.java )
+    fun  vuelta ( ) {
+        val anterior= Intent(this, MainActivity::class.java )
         startActivity(anterior)
     }
 
