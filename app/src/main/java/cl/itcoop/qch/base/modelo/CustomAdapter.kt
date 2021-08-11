@@ -7,11 +7,10 @@ import android.widget.TextView
 import cl.itcoop.qch.R
 import kotlin.collections.ArrayList
 
-class CustomAdapter1(val recetaList: ArrayList<Receta>) : RecyclerView.Adapter<CustomAdapter1.ViewHolder>() {
-
+class AdaptadorReceta(val recetaList: ArrayList<Receta>) : RecyclerView.Adapter<AdaptadorReceta.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_nueva_presentacion, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.tarjeta, parent, false)
         return ViewHolder(v)
     }
 
@@ -35,11 +34,11 @@ class CustomAdapter1(val recetaList: ArrayList<Receta>) : RecyclerView.Adapter<C
 
 }
 
-class CustomAdapter2(val videoList: ArrayList<Video>) : RecyclerView.Adapter<CustomAdapter2.ViewHolder>() {
+class AdaptadorVideo(val videoList: ArrayList<Video>) : RecyclerView.Adapter<AdaptadorVideo.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_nueva_presentacion, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.tarjeta, parent, false)
         return ViewHolder(v)
     }
 
@@ -64,11 +63,11 @@ class CustomAdapter2(val videoList: ArrayList<Video>) : RecyclerView.Adapter<Cus
 }
 
 
-class CustomAdapter3(val articuloList: ArrayList<Articulo>) : RecyclerView.Adapter<CustomAdapter3.ViewHolder>() {
+class AdaptadorArticulo(val articuloList: ArrayList<Articulo>) : RecyclerView.Adapter<AdaptadorArticulo.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_nueva_presentacion, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.tarjeta, parent, false)
         return ViewHolder(v)
     }
 

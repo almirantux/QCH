@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_nueva_presentacion.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_presentacion.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/tarjeta.xml" value="0.2" />
         <entry key="app/src/main/res/xml/networkconfig.xml" value="0.12239583333333333" />
       </map>
     </option>
