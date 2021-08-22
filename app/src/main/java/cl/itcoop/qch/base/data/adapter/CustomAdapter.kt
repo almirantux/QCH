@@ -1,4 +1,4 @@
-package cl.itcoop.qch.base.modelo
+package cl.itcoop.qch.base.data.modelo
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View

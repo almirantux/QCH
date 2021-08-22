@@ -3,7 +3,6 @@ package cl.itcoop.qch.base.vista
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import cl.itcoop.qch.R
 import cl.itcoop.qch.base.MainActivity
 

@@ -8,14 +8,19 @@ import android.widget.ImageView
 import cl.itcoop.qch.R
 import cl.itcoop.qch.base.vista.FichaActivity
 import cl.itcoop.qch.base.vista.NuevaPresentacionActivity
+import cl.itcoop.qch.databinding.ActivityMainBinding
+
 
 
 class MainActivity : AppCompatActivity() {
     lateinit var recetas:ImageView
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        recetas=findViewById(R.id.Recetas)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        recetas=binding.Recetas
         recetas.setOnClickListener (object:View.OnClickListener{
             override fun onClick(view: View?)
             {
@@ -24,6 +29,9 @@ class MainActivity : AppCompatActivity() {
         }
         )
     }
+
+
+
     fun  presentaArticulo (view: View) {
         val extra= Bundle()
         extra.putString("dato","articulos")

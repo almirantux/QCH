@@ -16,7 +16,6 @@
             android:name=".base.vista.NuevaPresentacionActivity"
             android:exported="true" />
         <activity android:name=".base.vista.FichaActivity" />
-        <activity android:name=".base.vista.PresentacionActivity" />
         <activity android:name=".base.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

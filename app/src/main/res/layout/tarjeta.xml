@@ -33,6 +33,13 @@
                     android:padding="5dp"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
 
+                <TextView
+                    android:id="@+id/textViewEnlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
 
             </LinearLayout>
 
