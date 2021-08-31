@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">QCH</string>
+    <string name="Que_Como_Hoy">Que Como HOY</string>
     <string name="Articulos">Articulos</string>
     <string name="Videos">Videos</string>
     <string name="Avisos">Avisos</string>
@@ -7,5 +8,7 @@
     <string name="ToggleButton">ToggleButton</string>
     <string name="Registar">Registrar</string>
     <string name="Actualizar">Actualizar</string>
-    <string name="Receta" />
+    <string name="Receta" >Receta</string>
+    <string name="Agrega_Ficha" >Agrega Ficha </string>
+
 </resources>

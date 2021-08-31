@@ -7,13 +7,15 @@ import android.view.View
 import android.widget.ImageView
 import cl.itcoop.qch.R
 import cl.itcoop.qch.base.vista.FichaActivity
-import cl.itcoop.qch.base.vista.NuevaPresentacionActivity
+import cl.itcoop.qch.base.vista.PresentaRecetaActivity
+import cl.itcoop.qch.base.vista.PresentaVideoActivity
+import cl.itcoop.qch.base.vista.PresentaArticuloActivity
+import cl.itcoop.qch.base.vista.PresentaAvisoActivity
 import cl.itcoop.qch.databinding.ActivityMainBinding
 
 
-
 class MainActivity : AppCompatActivity() {
-    lateinit var recetas:ImageView
+    private lateinit var recetas:ImageView
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,35 +23,34 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         recetas=binding.Recetas
-        recetas.setOnClickListener (object:View.OnClickListener{
-            override fun onClick(view: View?)
-            {
-              presentaReceta()
-            }
-        }
-        )
+        recetas.setOnClickListener { presentaReceta(recetas)}
     }
-
-
 
     fun  presentaArticulo (view: View) {
         val extra= Bundle()
         extra.putString("dato","articulos")
-      val siguiente= Intent(this, NuevaPresentacionActivity::class.java )
+      val siguiente= Intent(this, PresentaArticuloActivity::class.java )
         siguiente.putExtras(extra)
       startActivity(siguiente)
     }
     fun  presentaVideo (view: View) {
         val extra= Bundle()
         extra.putString("dato","video")
-        val siguiente= Intent(this, NuevaPresentacionActivity::class.java )
+        val siguiente= Intent(this, PresentaVideoActivity::class.java )
         siguiente.putExtras(extra)
         startActivity(siguiente)
     }
-    fun  presentaReceta () {
+    fun  presentaReceta (view: View) {
         val extra= Bundle()
         extra.putString("dato","recetas")
-        val siguiente= Intent(this, NuevaPresentacionActivity::class.java )
+        val siguiente= Intent(this, PresentaRecetaActivity::class.java )
+        siguiente.putExtras(extra)
+        startActivity(siguiente)
+    }
+    fun  presentaAviso (view: View) {
+        val extra= Bundle()
+        extra.putString("dato","avisos")
+        val siguiente= Intent(this, PresentaAvisoActivity::class.java )
         siguiente.putExtras(extra)
         startActivity(siguiente)
     }
@@ -58,6 +59,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(registrar)
     }
 
-    fun vuelta(view: View) {}
+    fun  vuelta (view: View) {
+        var vuelve= Intent(this, FichaActivity::class.java )
+        startActivity(vuelve)
+
+    }
+
 
 }

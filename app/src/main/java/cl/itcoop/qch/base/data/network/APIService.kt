@@ -1,6 +1,5 @@
 package cl.itcoop.qch.base.data.network
 
-
 import cl.itcoop.qch.base.data.modelo.ArticuloModel
 import cl.itcoop.qch.base.data.modelo.AvisoModel
 import cl.itcoop.qch.base.data.modelo.RecetaModel
@@ -18,5 +17,6 @@ interface APIService
         suspend fun getAllArticulos(): Response<List<ArticuloModel>>
         @GET("aviapi/post.php")
         suspend fun getAllAvisos(): Response<List<AvisoModel>>
+
 
 }

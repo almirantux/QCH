@@ -1,4 +1,5 @@
 package cl.itcoop.qch.base.data.modelo
+import android.provider.MediaStore
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -27,14 +28,18 @@ class AdaptadorReceta(val recetaList: ArrayList<Receta>) : RecyclerView.Adapter<
         fun bindItems(receta: Receta) {
             val textViewReceta = itemView.findViewById(R.id.textViewNombre) as TextView
             val textViewDificultad = itemView.findViewById(R.id.textViewTema) as TextView
-            textViewReceta.text = receta.nombre
-            textViewDificultad.text = receta.dificultad
+         //   textViewReceta.text = receta.nombre
+           // textViewDificultad.text = receta.dificultad
         }
+    }
+
+    class Receta {
+
     }
 
 }
 
-class AdaptadorVideo(val videoList: ArrayList<Video>) : RecyclerView.Adapter<AdaptadorVideo.ViewHolder>() {
+class AdaptadorVideo(val videoList: ArrayList<video>) : RecyclerView.Adapter<AdaptadorVideo.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
@@ -52,13 +57,17 @@ class AdaptadorVideo(val videoList: ArrayList<Video>) : RecyclerView.Adapter<Ada
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        fun bindItems(video: Video) {
+        fun bindItems(video: video) {
             val textViewVideo = itemView.findViewById(R.id.textViewNombre) as TextView
             val textViewTema = itemView.findViewById(R.id.textViewTema) as TextView
-            textViewVideo.text = video.titulo
-            textViewTema.text = video.tema
+         //   textViewVideo.text = video.titulo
+          //  textViewTema.text = video.tema
         }
     }
+
+}
+
+class video {
 
 }
 
@@ -84,9 +93,13 @@ class AdaptadorArticulo(val articuloList: ArrayList<Articulo>) : RecyclerView.Ad
         fun bindItems(articulo: Articulo) {
             val textViewTitulo = itemView.findViewById(R.id.textViewNombre) as TextView
             val textViewTema = itemView.findViewById(R.id.textViewTema) as TextView
-            textViewTitulo.text = articulo.titulo
-            textViewTema.text = articulo.tema
+           // textViewTitulo.text = articulo.titulo
+        //    textViewTema.text = articulo.tema
         }
     }
+
+}
+
+class Articulo {
 
 }

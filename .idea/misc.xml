@@ -4,10 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_baseline_accessibility_24.xml" value="0.13854166666666667" />
-        <entry key="app/src/main/res/layout/activity_ficha.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_conrecicleview.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/layout/activity_ficha.xml" value="0.29067930489731436" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_nueva_ficha.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_nueva_presentacion.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_presenta_articulo.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_presenta_aviso.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_presenta_receta.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_presenta_video.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_presentacion.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/layout/recyclerview_item.xml" value="0.11510416666666666" />
         <entry key="app/src/main/res/layout/tarjeta.xml" value="0.2" />
         <entry key="app/src/main/res/xml/networkconfig.xml" value="0.12239583333333333" />
       </map>

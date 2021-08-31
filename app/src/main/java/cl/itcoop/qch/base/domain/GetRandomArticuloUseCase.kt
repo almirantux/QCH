@@ -1,10 +1,9 @@
 package cl.itcoop.qch.base.domain
 
-import cl.itcoop.qch.base.VistaModelo.ArticuloModel
+import cl.itcoop.qch.base.data.modelo.ArticuloModel
 import cl.itcoop.qch.base.data.modelo.ArticuloProvider
 
 class GetRandomArticuloUseCase {
-
     operator fun invoke(): ArticuloModel?{
         val articulos = ArticuloProvider.articulos
         if(!articulos.isNullOrEmpty()){

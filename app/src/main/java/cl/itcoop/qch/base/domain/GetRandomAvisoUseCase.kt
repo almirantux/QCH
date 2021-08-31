@@ -1,10 +1,9 @@
 package cl.itcoop.qch.base.domain
 
-import cl.itcoop.qch.base.vistaModelo.AvisoModel
+import cl.itcoop.qch.base.data.modelo.AvisoModel
 import cl.itcoop.qch.base.data.modelo.AvisoProvider
 
 class GetRandomAvisoUseCase {
-
     operator fun invoke(): AvisoModel?{
         val avisos = AvisoProvider.avisos
         if(!avisos.isNullOrEmpty()){
