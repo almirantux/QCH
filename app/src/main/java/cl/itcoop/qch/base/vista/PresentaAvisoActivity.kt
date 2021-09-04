@@ -15,6 +15,7 @@ class PresentaAvisoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPresentaAvisoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         avisoViewModel.onCreate()
         avisoViewModel.avisoModel.observe(
             this,

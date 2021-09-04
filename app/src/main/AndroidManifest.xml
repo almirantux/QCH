@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QCH">
         <activity android:name=".base.vista.FichaActivity" />
+        <activity android:name=".base.vista.NuevaFichaActivity" />
         <activity android:name=".base.vista.PresentaRecetaActivity" />
         <activity android:name=".base.vista.PresentaAvisoActivity" />
         <activity android:name=".base.vista.PresentaArticuloActivity" />

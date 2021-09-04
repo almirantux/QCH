@@ -9,6 +9,22 @@
     <string name="Registar">Registrar</string>
     <string name="Actualizar">Actualizar</string>
     <string name="Receta" >Receta</string>
+    <string name="Email" >Email</string>
+    <string name="Nombre" >Nombre</string>
+    <string name="Rut" >Rut</string>
+    <string name="DV" >Digito Verificador</string>
+    <string name="FN" >Fecha Nacimiento</string>
     <string name="Agrega_Ficha" >Agrega Ficha </string>
+    <string name="Movil" >Movil</string>
+    <string name="Genero" >Genero</string>
+    <string name="Edad" >Edad</string>
+    <string name="Peso" >Peso</string>
+    <string name="Estatura" >Estatura</string>
+    <string name="IMC" >IMC</string>
+    <string name="Guardar" >Guardar</string>
+    <string name="imagen">imagen</string>
+    <string name="item">Item</string>
+    <string name="textview">TextView</string>
+    <string name="Ficha">Ficha</string>
 
 </resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/imagen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_background"
+                tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:text="@string/Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nombre" app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"   android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView" android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/nombre"
+        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:text="@string/Rut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rut" app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"  android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView" android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dv"
+        app:layout_constraintTop_toBottomOf="@+id/nombre"
+        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_marginTop="8dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movil" app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"  android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView" android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fechanacimiento"
+        app:layout_constraintTop_toBottomOf="@+id/movil"
+        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/genero"
+        app:layout_constraintTop_toBottomOf="@+id/movil"
+        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edad"
+        app:layout_constraintTop_toBottomOf="@+id/genero"
+        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/peso" app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"   android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView" android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/estatura"
+        app:layout_constraintTop_toBottomOf="@+id/peso"
+        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imc"
+        app:layout_constraintTop_toBottomOf="@+id/edad"
+        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_marginTop="8dp"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

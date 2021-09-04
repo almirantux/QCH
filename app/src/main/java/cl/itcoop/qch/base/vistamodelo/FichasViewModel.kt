@@ -1,27 +1,49 @@
 package cl.itcoop.qch.base.vistamodelo
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.asLiveData
-import androidx.lifecycle.viewModelScope
-import cl.itcoop.qch.base.data.FichaRepository
+
+import androidx.lifecycle.*
 import cl.itcoop.qch.base.room.Ficha
-import kotlinx.coroutines.launch
+import cl.itcoop.qch.base.room.FichaDatabase
+import cl.itcoop.qch.base.data.FichaRepository
 
-class FichaViewModel(private val repository: FichaRepository) : ViewModel() {
-    val allFichas: LiveData<List<Ficha>> = repository.allFichas.asLiveData()
-    fun insert(ficha: Ficha) = viewModelScope.launch {
-        repository.insert(ficha)
+class FichaViewModel( private val repo: FichaRepository):  ViewModel() {
+     val allFichas : LiveData<List<Ficha>> = repo.fichas.asLiveData()
+
+
+
+// obtener todas las fichas
+/*
+    fun getAllFichas() {
+        val fichaDao = FichaDatabase.getDatabase().fichaDao()
+        val list = fichaDao.getAllFicha()
+         allFichas.postValue(list)
     }
-}
 
-class FichaViewModelFactory(private val repository: FichaRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(FichaViewModel::class.java)) {
-            @Suppress("UNCHECKED_CAST")
-            return FichaViewModel(repository) as T
+
+
+// insertar una ficha
+    fun insertaFicha(entity: Ficha){
+        val fichaDao = FichaDatabase.getDatabase(getApplication()).fichaDao()
+        fichaDao.insertFicha(entity)
+        getAllFichas()
+    }
+// actualizar una ficha
+    fun updateFicha(entity: Ficha){
+        val fichaDao = FichaDatabase.getDatabase(getApplication()).fichaDao()
+        fichaDao.update(entity)
+        getAllFichas()
+    }
+
+*/
+    class FichaViewModelFactory(private val repo: FichaRepository): ViewModelProvider.Factory {
+        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+            if (modelClass.isAssignableFrom(FichaViewModel::class.java)) {
+                @Suppress("UNCHECKED_CAST")
+                return FichaViewModel(repo) as T
+            }
+            throw IllegalArgumentException("Unknown ViewModel class")
+
         }
-        throw IllegalArgumentException("Unknown ViewModel class")
     }
+
 }

@@ -51,35 +51,37 @@
         app:layout_constraintTop_toBottomOf="@+id/Recetas"
         app:layout_constraintVertical_bias="0.02" />
 
+
     <ImageView
         android:id="@+id/Avisos"
-        android:layout_width="124dp"
-        android:layout_height="150dp"
+        android:layout_width="141dp"
+        android:layout_height="175dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="88dp"
         android:contentDescription="@string/Avisos"
+        android:foreground="@drawable/aviso"
         android:onClick="presentaAviso"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintBottom_toTopOf="@+id/registroFicha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Articulos"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ImageContrastCheck" />
 
-    <ToggleButton
+    <ImageView
         android:id="@+id/registroFicha"
         android:layout_width="217dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="108dp"
-        android:background="@color/yellow"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="36dp"
+        android:contentDescription="@string/Ficha"
+        android:foreground="@drawable/ficha"
         android:onClick="registra"
-        android:text="@string/ToggleButton"
-        android:textColor="@color/blue"
-        android:textOff="@string/Registar"
-        android:textOn="@string/Actualizar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Articulos" />
 
     <TextView
         android:id="@+id/quecomohoy"

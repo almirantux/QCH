@@ -1,35 +1,14 @@
 package cl.itcoop.qch.base.room
 
 import androidx.room.*
+import java.io.Serializable
 
-@Entity(tableName = "genero" )
-data class  Genero (@ColumnInfo(name = "idgenero")
-                    @PrimaryKey(autoGenerate = true)
-                    val idgenero:Long = 0 ,
-                    @ColumnInfo(name = "descripcion")
-                    val descripcion:String)
-
-@Entity(foreignKeys = [ForeignKey(entity = Genero::class,
-    parentColumns = arrayOf("idgenero"),
-    childColumns = arrayOf("genero"),
-    onDelete = ForeignKey.CASCADE)], tableName = "usuario",indices = [Index("genero" )] )
-data class  Usuario (@ColumnInfo(name = "idusuario")
-                    @PrimaryKey(autoGenerate = true)
-                    val idusuario:Long = 0,
-                    @ColumnInfo(name = "movil")
-                    val movil:String,
-                    val genero:String)
-
-@Entity(foreignKeys = [ForeignKey(entity = Usuario::class,
-    parentColumns = arrayOf("idusuario"),
-    childColumns = arrayOf("usuario"),
-    onDelete = ForeignKey.CASCADE)], tableName = "ficha", indices = [Index("usuario")]
-)
+@Entity(tableName = "laficha" )
 data class Ficha(@ColumnInfo(name = "idficha")
                  @PrimaryKey(autoGenerate = true)
-                 val idficha:Long = 0,
+                 var idficha:Int = 0,
                  @ColumnInfo(name = "rut")
-                 val rut:Long,
+                 val rut: String,
                  @ColumnInfo(name = "dv")
                  val dv:String,
                  @ColumnInfo(name = "nombre")
@@ -49,6 +28,9 @@ data class Ficha(@ColumnInfo(name = "idficha")
                  @ColumnInfo(name = "fechaficha")
                  val fechaficha:String,
                  @ColumnInfo(name = "usuario")
-                 val usuario:String
-
-)
+                 val usuario:String,
+                 @ColumnInfo(name = "movil")
+                 val movil:String,
+                 @ColumnInfo(name = "genero")
+                 val genero:String
+) : Serializable

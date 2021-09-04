@@ -1,13 +1,16 @@
 package cl.itcoop.qch.base.data
 
 import androidx.annotation.WorkerThread
-import kotlinx.coroutines.flow.Flow
 import cl.itcoop.qch.base.room.*
+import kotlinx.coroutines.flow.Flow
+
 
 class FichaRepository (private val fichaDao: FichaDAO){
 
+     val fichas : Flow<List<Ficha>> = fichaDao.getAllFicha()
 
-        val allFichas: Flow<List<Ficha>> = fichaDao.getAllFicha()
+
+   // val allFichas: Flow<List<Ficha>> = fichaDao.getAllFicha()
 
         @Suppress("RedundantSuspendModifier")
         @WorkerThread
@@ -16,27 +19,3 @@ class FichaRepository (private val fichaDao: FichaDAO){
 
         }
     }
-class UsuarioRepository (private val usuarioDao: UsuarioDAO){
-
-
-    val allUsuarios: Flow<List<Usuario>> = usuarioDao.getAllUsuario()
-
-    @Suppress("RedundantSuspendModifier")
-    @WorkerThread
-    suspend fun insert(usuarios: Usuario) {
-        usuarioDao.insertUsuario(usuarios)
-
-    }
-}
-class GeneroRepository (private val generoDao: GeneroDAO){
-
-
-    val allGeneros: Flow<List<Genero>> = generoDao.getAllGenero()
-
-    @Suppress("RedundantSuspendModifier")
-    @WorkerThread
-    suspend fun insert(generos: Genero) {
-        generoDao.insertGenero(generos)
-
-    }
-}

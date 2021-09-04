@@ -54,16 +54,14 @@ class MainActivity : AppCompatActivity() {
         siguiente.putExtras(extra)
         startActivity(siguiente)
     }
+
+
     fun  registra (view: View) {
         val registrar= Intent(this, FichaActivity::class.java )
         startActivity(registrar)
     }
 
-    fun  vuelta (view: View) {
-        var vuelve= Intent(this, FichaActivity::class.java )
-        startActivity(vuelve)
 
-    }
 
 
 }

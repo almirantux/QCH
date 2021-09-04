@@ -5,34 +5,27 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.Room
 
-// import androidx.sqlite.db.SupportSQLiteDatabase
-// import kotlinx.coroutines.CoroutineScope
-// import kotlinx.coroutines.Dispatchers
-// import kotlinx.coroutines.launch
 
-
-@Database(entities = [Ficha::class, Usuario::class,Genero::class], version = 1)
-abstract class FichaRoomDatabase : RoomDatabase() {
+@Database(entities = [Ficha::class ], version = 1)
+abstract class FichaDatabase : RoomDatabase() {
     abstract fun fichaDao(): FichaDAO
     companion object {
         @Volatile
-        private var INSTANCE: FichaRoomDatabase? = null
-        fun getDatabase(
-            context: Context,
-          //  scope: CoroutineScope
-        ): FichaRoomDatabase {
-            return INSTANCE ?: synchronized(this) {
+        private var INSTANCE: FichaDatabase? = null
+        fun getDatabase(context: Context): FichaDatabase {
+            val tempInstance = INSTANCE
+            if (tempInstance != null) {
+                return tempInstance
+            }
+            synchronized(this) {
                 val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    FichaRoomDatabase::class.java,
+                  context.applicationContext,
+                    FichaDatabase::class.java,
                     "ficha_database"
-                )
-                    .fallbackToDestructiveMigration()
-                    .build()
+                ).build()
                 INSTANCE = instance
-                instance
+                return instance
             }
         }
-   }
+    }
 }
-
