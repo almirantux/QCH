@@ -24,7 +24,8 @@
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_accessibility_24" />
+        app:srcCompat="@drawable/ic_baseline_accessibility_24"
+        tools:ignore="ImageContrastCheck" />
 
 
 </LinearLayout>

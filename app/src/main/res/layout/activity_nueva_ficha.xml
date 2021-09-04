@@ -20,6 +20,7 @@
         android:inputType="textPersonName"
         android:textColor="#F3E5F5"
         android:textColorHint="#F3E5F5"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +36,7 @@
         android:inputType="textEmailAddress"
         android:textColor="@color/yellow"
         android:textColorHint="#F3E5F5"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,13 +47,14 @@
         android:id="@+id/rut_fc"
         android:layout_width="88dp"
         android:layout_height="48dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
         android:autofillHints="no"
         android:hint="@string/Rut"
         android:inputType="text"
         android:textColor="@color/white"
         android:textColorHint="#F3E5F5"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_fc" />
 
@@ -60,33 +63,36 @@
         android:id="@+id/dv_fc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
         android:autofillHints="no"
         android:inputType="text"
         android:minWidth="48dp"
         android:minHeight="48dp"
+        android:hint="@string/dv"
         android:textColor="@color/white"
         android:textColorHint="#F3E5F5"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/rut_fc"
         app:layout_constraintTop_toBottomOf="@+id/email_fc"
-        tools:ignore="SpeakableTextPresentCheck" />
+         />
 
     <EditText
         android:id="@+id/fn_fc"
-        android:layout_width="189dp"
+        android:layout_width="174dp"
         android:layout_height="48dp"
+        android:layout_marginTop="40dp"
         android:autofillHints="no"
         android:hint="@string/FN"
         android:inputType="text|date"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintBaseline_toBaselineOf="@+id/dv_fc"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
-        app:layout_constraintStart_toEndOf="@+id/dv_fc" />
-
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toEndOf="@+id/dv_fc"
+        app:layout_constraintTop_toBottomOf="@+id/email_fc" />
 
     <EditText
         android:id="@+id/movil_fc"
@@ -100,6 +106,7 @@
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dv_fc" />
 
@@ -114,41 +121,42 @@
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.662"
         app:layout_constraintStart_toEndOf="@+id/movil_fc"
         app:layout_constraintTop_toBottomOf="@+id/fn_fc" />
 
+
     <EditText
         android:id="@+id/edad_fc"
         android:layout_width="69dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
         android:autofillHints="no"
         android:hint="@string/Edad"
         android:inputType="number"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movil_fc" />
-
 
     <EditText
         android:id="@+id/peso_fc"
         android:layout_width="68dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
         android:autofillHints="no"
         android:hint="@string/Peso"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/edad_fc"
         app:layout_constraintTop_toBottomOf="@+id/movil_fc" />
 
@@ -156,32 +164,33 @@
         android:id="@+id/estatura_fc"
         android:layout_width="97dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:autofillHints="no"
         android:hint="@string/Estatura"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toEndOf="@+id/peso_fc"
         app:layout_constraintTop_toBottomOf="@+id/genero_fc" />
-
 
     <EditText
         android:id="@+id/imc_fc"
         android:layout_width="97dp"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="184dp"
         android:autofillHints="no"
         android:hint="@string/IMC"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/peso_fc" />
 
     <Button
@@ -190,9 +199,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="24dp"
         android:text="@string/Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imc_fc" />
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imc_fc"
+        app:layout_constraintVertical_bias="0.027" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,96 +7,95 @@
     android:background="@color/teal_700"
     tools:context=".base.MainActivity">
 
+
     <ImageView
         android:id="@+id/Recetas"
         android:layout_width="142dp"
         android:layout_height="176dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/Recetas"
         android:onClick="presentaReceta"
         android:scaleType="centerCrop"
         android:src="@drawable/recetas"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/quecomohoy" />
 
     <ImageView
         android:id="@+id/Articulos"
         android:layout_width="137dp"
         android:layout_height="177dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="28dp"
         android:contentDescription="@string/Articulos"
         android:onClick="presentaArticulo"
         android:scaleType="centerCrop"
         android:src="@drawable/articulos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintHorizontal_bias="0.236"
         app:layout_constraintStart_toEndOf="@+id/Recetas"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/quecomohoy" />
+
 
     <ImageView
         android:id="@+id/Videos"
         android:layout_width="142dp"
         android:layout_height="171dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/Videos"
         android:onClick="presentaVideo"
         android:scaleType="centerCrop"
         android:src="@drawable/videos"
-        app:layout_constraintBottom_toTopOf="@+id/registroFicha"
-        app:layout_constraintEnd_toStartOf="@+id/Avisos"
-        app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Recetas"
-        app:layout_constraintVertical_bias="0.02" />
-
+        app:layout_constraintTop_toBottomOf="@+id/Recetas" />
 
     <ImageView
         android:id="@+id/Avisos"
         android:layout_width="141dp"
         android:layout_height="175dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="44dp"
         android:contentDescription="@string/Avisos"
         android:foreground="@drawable/aviso"
         android:onClick="presentaAviso"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_foreground"
-        app:layout_constraintBottom_toTopOf="@+id/registroFicha"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toEndOf="@+id/Videos"
         app:layout_constraintTop_toBottomOf="@+id/Articulos"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/registroFicha"
         android:layout_width="217dp"
         android:layout_height="64dp"
-        android:layout_marginTop="280dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginTop="73dp"
         android:contentDescription="@string/Ficha"
         android:foreground="@drawable/ficha"
         android:onClick="registra"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Articulos" />
+        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Avisos"
+        app:layout_constraintVertical_bias="0.049" />
 
     <TextView
         android:id="@+id/quecomohoy"
-        android:layout_width="237dp"
-        android:layout_height="41dp"
+        android:layout_width="259dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
         android:text="@string/Que_Como_Hoy"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

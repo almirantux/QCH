@@ -26,5 +26,14 @@
     <string name="item">Item</string>
     <string name="textview">TextView</string>
     <string name="Ficha">Ficha</string>
+    <string name="titulo_del_video">Titulo del video:</string>
+    <string name="tema_del_video">Tema del video:</string>
+    <string name="enlace">Enlace:</string>
+    <string name="nombre_de_la_receta">Nombre de la receta:</string>
+    <string name="grado_de_dificultad">Grado de dificultad:</string>
+    <string name="enlace_dospuntos">Enlace:</string>
+    <string name="titulo_del_articulo">Titulo del articulo:</string>
+    <string name="tema_del_articulo">Tema del Articulo:</string>
+    <string name="dv">Dv</string>
 
 </resources>
