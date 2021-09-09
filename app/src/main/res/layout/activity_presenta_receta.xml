@@ -16,32 +16,28 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
         android:padding="16dp"
         android:textAlignment="viewStart"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintHorizontal_bias="0.177"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textReceta" />
 
     <TextView
-        android:id="@+id/tvCaracteristica"
-        android:layout_width="309dp"
-        android:layout_height="62dp"
-        android:layout_above="@+id/tvEnlace"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:padding="16dp"
-        android:textAlignment="viewStart"
+        android:id="@+id/textReceta"
+        android:layout_width="207dp"
+        android:layout_height="40dp"
+        android:text="@string/nombre_de_la_receta"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textdificultad" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvEnlace"
@@ -56,47 +52,20 @@
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textenlace" />
-
-    <ProgressBar
-        android:id="@+id/loading"
-        android:layout_width="253dp"
-        android:layout_height="171dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="92dp"
-        android:progressTint="#E91E63"
-        android:secondaryProgressTint="#3F51B5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEnlace"
-        app:layout_constraintVertical_bias="0.675" />
-
-    <TextView
-        android:id="@+id/textReceta"
-        android:layout_width="207dp"
-        android:layout_height="40dp"
-        android:text="@string/nombre_de_la_receta"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textdificultad"
         android:layout_width="186dp"
         android:layout_height="39dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="36dp"
         android:text="@string/grado_de_dificultad"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvReceta" />
 
@@ -109,8 +78,41 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCaracteristica" />
+
+    <TextView
+        android:id="@+id/tvCaracteristica"
+        android:layout_width="309dp"
+        android:layout_height="62dp"
+        android:layout_above="@+id/tvEnlace"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:padding="16dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textdificultad" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="253dp"
+        android:layout_height="171dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="92dp"
+        android:progressTint="#E91E63"
+        android:secondaryProgressTint="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnlace"
+        app:layout_constraintVertical_bias="0.925" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

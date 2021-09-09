@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import cl.itcoop.qch.R
 import cl.itcoop.qch.base.vista.FichaActivity
@@ -24,6 +26,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         recetas=binding.Recetas
         recetas.setOnClickListener { presentaReceta(recetas)}
+
+        val crashButton = Button(this)
+        crashButton.text = getString(R.string.Test_Crash)
+        crashButton.setOnClickListener {
+            throw RuntimeException("Prueba de Crash") // Force a crash
+        }
+
+        addContentView(crashButton, ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT))
+
+
     }
 
     fun  presentaArticulo (view: View) {
@@ -60,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         val registrar= Intent(this, FichaActivity::class.java )
         startActivity(registrar)
     }
+
 
 
 

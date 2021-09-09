@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
+    android:background="@color/background"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp" >
+        android:layout_margin="5dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/purple_300"
             android:orientation="vertical">
 
             <ImageView
@@ -26,6 +28,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
+                android:background="@color/purple_700"
                 android:contentDescription="@string/imagen"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -33,102 +36,219 @@
                 app:srcCompat="@drawable/ic_launcher_background"
                 tools:ignore="ImageContrastCheck" />
 
-    <TextView
-        android:text="@string/Nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/nombre" app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="24dp"   android:layout_marginStart="16dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView" android:textStyle="bold"/>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_300"
+                android:numColumns="2"
+                android:rowCount="12">
 
-    <TextView
-        android:text="@string/Email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/nombre"
-        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
-        android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/txnombre"
+                    android:layout_width="55dp"
+                    android:layout_height="21dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:text="@string/Nombre"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:text="@string/Rut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/rut" app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="24dp"  android:layout_marginStart="16dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView" android:textStyle="bold"/>
-
-    <TextView
-        android:text="@string/dv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dv"
-        app:layout_constraintTop_toBottomOf="@+id/nombre"
-        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
-        android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/nombre"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
 
-    <TextView
-        android:text="@string/Movil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/movil" app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="24dp"  android:layout_marginStart="16dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView" android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/txemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:text="@string/Email"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:text="@string/FN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fechanacimiento"
-        app:layout_constraintTop_toBottomOf="@+id/movil"
-        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
-        android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:text="@string/Genero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/genero"
-        app:layout_constraintTop_toBottomOf="@+id/movil"
-        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
-        android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/txrut"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:text="@string/Rut"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:text="@string/Edad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edad"
-        app:layout_constraintTop_toBottomOf="@+id/genero"
-        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
-        android:layout_marginTop="8dp"/>
+                <LinearLayout
+                    android:layout_width="356dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:orientation="horizontal">
 
-    <TextView
-        android:text="@string/Peso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/peso" app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="24dp"   android:layout_marginStart="16dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView" android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/rut"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
 
-    <TextView
-        android:text="@string/Estatura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/estatura"
-        app:layout_constraintTop_toBottomOf="@+id/peso"
-        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
-        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:id="@+id/dv"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
-    <TextView
-        android:text="@string/IMC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imc"
-        app:layout_constraintTop_toBottomOf="@+id/edad"
-        android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/imageView"
-        android:layout_marginTop="8dp"/>
 
+                <TextView
+                    android:id="@+id/txmovil"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:text="@string/Movil"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/movil"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txfechanacimiento"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:textColor="@color/white"
+                    android:text="@string/FN"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fechanacimiento"
+                    android:layout_width="244dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="5"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txgenero"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:text="@string/Genero"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/genero"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txedad"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:text="@string/Edad"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/edad"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="7"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txpeso"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:text="@string/Peso"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/peso"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txestatura"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:text="@string/Estatura"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/estatura"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="9"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tximc"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="10"
+                    android:layout_column="0"
+                    android:text="@string/IMC"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/imc"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="10"
+                    android:layout_column="1"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </GridLayout>
 
         </LinearLayout>
 

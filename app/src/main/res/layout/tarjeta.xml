@@ -21,7 +21,7 @@
 
                 <TextView
                     android:id="@+id/textViewNombre"
-                    android:layout_width="match_parent"
+                    android:layout_width="293dp"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
@@ -30,7 +30,7 @@
 
                 <TextView
                     android:id="@+id/textViewTema"
-                    android:layout_width="match_parent"
+                    android:layout_width="293dp"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
@@ -39,7 +39,7 @@
 
                 <TextView
                     android:id="@+id/textViewEnlace"
-                    android:layout_width="match_parent"
+                    android:layout_width="291dp"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"

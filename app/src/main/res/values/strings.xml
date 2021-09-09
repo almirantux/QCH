@@ -35,5 +35,7 @@
     <string name="titulo_del_articulo">Titulo del articulo:</string>
     <string name="tema_del_articulo">Tema del Articulo:</string>
     <string name="dv">Dv</string>
+    <string name="Test_Crash">Prueba_de_Crash</string>
+    <string name="FechaFicha">Fecha de la ficha</string>
 
 </resources>
