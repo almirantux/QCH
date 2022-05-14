@@ -21,6 +21,7 @@
         android:textColor="#F3E5F5"
         android:textColorHint="#F3E5F5"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,6 +38,7 @@
         android:textColor="@color/yellow"
         android:textColorHint="#F3E5F5"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,6 +57,7 @@
         android:textColor="@color/white"
         android:textColorHint="#F3E5F5"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_fc" />
 
@@ -63,19 +66,19 @@
         android:id="@+id/dv_fc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
         android:autofillHints="no"
+        android:hint="@string/dv"
         android:inputType="text"
         android:minWidth="48dp"
         android:minHeight="48dp"
-        android:hint="@string/dv"
         android:textColor="@color/white"
         android:textColorHint="#F3E5F5"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/rut_fc"
-        app:layout_constraintTop_toBottomOf="@+id/email_fc"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/email_fc" />
 
     <EditText
         android:id="@+id/fn_fc"
@@ -89,6 +92,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.383"
         app:layout_constraintStart_toEndOf="@+id/dv_fc"
@@ -107,6 +111,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dv_fc" />
 
@@ -122,6 +127,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.662"
         app:layout_constraintStart_toEndOf="@+id/movil_fc"
@@ -141,6 +147,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movil_fc" />
 
@@ -157,6 +164,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/edad_fc"
         app:layout_constraintTop_toBottomOf="@+id/movil_fc" />
 
@@ -172,6 +180,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toEndOf="@+id/peso_fc"
@@ -189,6 +198,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/peso_fc" />

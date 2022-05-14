@@ -5,10 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.*
+// import androidx.lifecycle.*
 import cl.itcoop.qch.base.MainActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import cl.itcoop.qch.base.core.FichaApplication
+import cl.itcoop.qch.base.data.FichaRepository
 import cl.itcoop.qch.base.data.adapter.FichaAdapter
 import cl.itcoop.qch.base.vistamodelo.FichaViewModel
 import cl.itcoop.qch.databinding.ActivityFichaBinding
@@ -17,7 +18,8 @@ import cl.itcoop.qch.databinding.ActivityFichaBinding
 class FichaActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFichaBinding
     private val viewModel: FichaViewModel by viewModels {
-        FichaViewModel.FichaViewModelFactory( ( FichaApplication(this)).repositorio )
+      //  FichaViewModel.FichaViewModelFactory( ( FichaApplication(this)).repositorio )
+        FichaViewModel.FichaViewModelFactory(repo= FichaApplication(this).repositorio )
     }
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,11 +31,6 @@ class FichaActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = layoutManager
         val adapter=FichaAdapter()
         binding.recyclerView.adapter = adapter
-       // val lista:ArrayList<FichaModel>
-       // lista = viewModel.getAllFichasObservers() as ArrayList<FichaModel>
-        //adapter.setListData(lista)
-        //viewModel = ViewModelProviders.of(this).get(FichaViewModel::class.java)
-//viewLifecycleOwner
 
         viewModel.allFichas.observe(   this   ){
             fichas-> fichas.let{
