@@ -5,7 +5,7 @@ import android.content.Context
 import cl.itcoop.qch.base.data.FichaRepository
 import cl.itcoop.qch.base.room.FichaDatabase
 
-class FichaApplication(val context: Context) :Application( ){
+open class FichaApplication(val context: Context) :Application( ){
     private val basededatos by lazy {
         FichaDatabase.getDatabase(context)
     }

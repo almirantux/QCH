@@ -3,20 +3,18 @@ package cl.itcoop.qch.base.data.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import cl.itcoop.qch.base.data.modelo.FichaModel
 import cl.itcoop.qch.base.room.Ficha
 import cl.itcoop.qch.databinding.ItemFichaBinding
-import kotlin.collections.ArrayList
 
 
-class FichaAdapter  ()
+class FichaAdapter
     : RecyclerView.Adapter<FichaAdapter.ViewHolder>() {
 
     var fichas : List<Ficha> = listOf()
 
-    fun setListData(data: List<Ficha>) {
+   /* fun setListData(data: List<Ficha>) {
         this.fichas = data
-    }
+    }*/
 
     class ViewHolder(binding: ItemFichaBinding ) : RecyclerView.ViewHolder(binding.root) {
         val nombre= binding.nombre

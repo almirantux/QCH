@@ -46,7 +46,7 @@ class Ficha1Activity : AppCompatActivity() {
         })
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.ficha_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
